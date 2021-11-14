@@ -14,6 +14,8 @@ echo "deb https://apt.kubernetes.io kubernetes-xenial main" | sudo tee -a /etc/a
 sudo apt update
 
 sudo apt-get install -y kubectl kubeadm kubernetes-cni docker.io conntrack
+sudo mkdir /etc/sysctl.d
+sudo mkdir /etc/docker
 sudo mv ./kubernetes.conf /etc/sysctl.d/kubernetes.conf
 sudo mv ./daemon.json /etc/docker/daemon.json
 
